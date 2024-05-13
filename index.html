@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumplete</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="center.css">
+    <script src="game.js"></script>
+    <script>
+        let game;
+        window.onload = function () {
+            game = new Game(5);
+            game.start();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="section">
+        <div id="game" class="container is-unselectable" onclick="game.check()">
+        </div>
+        <hr>
+        <div class="container">
+            <input style="width: 30%;" class="input" id="size" type="number" max="7">
+            <button class="button is-primary" onclick='
+            let size = document.getElementById("size").value;
+            game = new Game(size);
+            game.start();
+            '>change</button>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
